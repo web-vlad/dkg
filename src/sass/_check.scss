@@ -1,0 +1,94 @@
+/* ! -- CHECKBOX -- */
+.checkboxes {
+    display: flex;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    /*flex-wrap: wrap;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;*/
+    align-items: center;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+}
+.check {
+    .check__wrapp {
+        cursor: pointer;
+        /*display: flex;
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        align-items: center;
+        -webkit-box-align: center;
+        -webkit-align-items: center;
+        -ms-flex-align: center;*/
+        position: relative;
+    }
+    /*.check__custom {
+        background: #fff;
+        position: relative;
+        display: flex;
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        -webkit-justify-content: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        align-items: center;
+        -webkit-box-align: center;
+        -webkit-align-items: center;
+        -ms-flex-align: center;
+        width: 19px;
+        height: 19px;
+        border-radius: 50%;
+        border: 1px solid #5896cc;
+    }
+    .check__custom:before {
+        background: #87b453;
+        display: block;
+        content: '';
+        width: 9px;
+        height: 9px;
+        border-radius: 50%;
+        @include all-transition();
+        opacity: 0;
+    }*/
+    .check__type {
+        display:none;
+    }
+    .check__label {
+        background: transparent;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 1.4rem;
+        color: #474747;
+        text-transform: none;
+        display: -ms-inline-flexbox;
+        display: inline-flex;
+        -ms-flex-align: center;
+        align-items: center;
+        height: 34px;
+        /*line-height: 34px;*/
+        padding: 0 15px;
+        overflow: hidden;
+        @include all-transition();
+    }
+    .check__type:checked + .check__custom:before {
+        opacity: 1;
+    }
+    /*.check__label img {
+        @include all-transition();
+        filter: grayscale(100%);
+        filter: gray;
+        opacity: 0.8;
+    }*/
+    &:hover .check__label, .check__type:checked ~ .check__label {
+        background: #b62920;
+        font-weight: 700;
+        color: #fff;
+    }
+    &:hover .check__type:checked ~ .check__label {
+        cursor: default;
+    }
+}
